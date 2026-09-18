@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Roy Peires | Hotelier &amp; Philanthropist | Costa del Sol</title>
+<meta name="description" content="Roy Peires is the Costa del Sol hotelier behind the IDILIQ Foundation and Kind Holidays, which has given free stays to over 2,300 people in crisis."/>
+<link rel="canonical" href="https://roypeires.netlify.app/"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/style.css"/>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function(){
+  const _sb=supabase.createClient('https://aowblircaymwuymcmllh.supabase.co','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFvd2JsaXJjYXltd3V5bWNtbGxoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTIzMzExMjcsImV4cCI6MjA2NzkwNzEyN30.qS7jxVwu83zEYMvxNo7C_2dtVrSZ6wYIFiNtoN69UkQ');
+  const _cid='Roy Peires';
+  async function loadSBLinks(){
+    const[{data:soc},{data:news}]=await Promise.all([
+      _sb.from('social_media').select('*').eq('client_id',_cid),
+      _sb.from('news_links').select('*').eq('client_id',_cid)
+    ]);
+    const render=(ids,data)=>ids.forEach(id=>{
+      const el=document.getElementById(id);
+      if(!el||!data)return;
+      el.innerHTML='';
+      data.forEach(l=>{
+        const a=document.createElement('a');
+        a.href=l.url;a.target='_blank';a.rel='noopener noreferrer';a.title=l.name;
+        a.innerHTML='<img src="'+l.icon+'" alt="'+l.name+'" style="width:30px;height:30px;border-radius:4px"/>';
+        el.appendChild(a);
+      });
+    });
+    render(['sml-soc-home'],soc);
+    render(['sml-news-home'],news);
+  }
+  document.addEventListener('DOMContentLoaded',loadSBLinks);
+})();
+</script>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Roy Peires | Hotelier & Philanthropist"/>
+<meta property="og:description" content="Roy Peires is the Costa del Sol hotelier behind the IDILIQ Foundation and Kind Holidays, which has given free stays to over 2,300 people in crisis."/>
+<meta property="og:image" content="https://roypeires.netlify.app/images/hero.jpg"/>
+<meta property="og:url" content="https://roypeires.netlify.app/"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://roypeires.netlify.app/#person",
+      "name": "Roy Peires",
+      "jobTitle": "Founder, IDILIQ Group",
+      "url": "https://roypeires.netlify.app/",
+      "image": "https://roypeires.netlify.app/images/hero.jpg",
+      "description": "Roy Peires is the founder of the IDILIQ Group on the Costa del Sol and the hotelier behind the IDILIQ Foundation and its Kind Holidays programme, which has given free stays to more than 2,300 people facing serious illness, bereavement or trauma.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Málaga",
+        "addressRegion": "Andalusia",
+        "addressCountry": "ES"
+      },
+      "sameAs": [
+        "https://github.com/RoyPeires",
+        "https://vimeo.com/roypeires",
+        "https://www.reddit.com/user/RoyPeires/",
+        "https://www.producthunt.com/@roypeires",
+        "https://gravatar.com/practicallypeacecad007ec3f"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://roypeires.netlify.app/#website",
+      "url": "https://roypeires.netlify.app/",
+      "name": "Roy Peires",
+      "description": "Roy Peires is the Costa del Sol hotelier behind the IDILIQ Foundation and Kind Holidays, which has given free stays to over 2,300 people in crisis.",
+      "publisher": {
+        "@id": "https://roypeires.netlify.app/#person"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ══ STICKY NAV ══════════════════════════════════════════════════ -->
+<nav id="main-nav">
+  <a class="nav-logo" href="/">Roy<span> Peires</span></a>
+  <ul class="nav-links">
+    <li><a class="active" href="/">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ══ HERO ═══════════════════════════════════════════════════════ -->
+<div class="h-hero">
+  <div class="h-inner">
+    <div class="h-photo"><img src="images/hero.jpg" alt="Roy Peires"/></div>
+    <div>
+      <h1 class="h-name">Roy Peires</h1>
+      <p class="h-role">Hotelier &amp; Philanthropist</p>
+      <p class="h-desc">Roy Peires founded what became the IDILIQ Group on the Costa del Sol in the 1980s. Four decades on, he is better known for what those hotels give away: the IDILIQ Foundation, and Kind Holidays, a programme that has handed more than 2,300 people a free stay at the moment they needed one most.</p>
+      <div class="h-loc">Costa del Sol, Spain</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ABOUT TEASER ═══════════════════════════════════════════════ -->
+<div class="h-about">
+  <div class="ha-inner">
+    <div class="ha-text">
+      <p class="eyebrow">About</p>
+      <h2 class="sec-title">A hotelier who measures the year in rooms given away</h2>
+      <p>Roy Peires started the business that became the IDILIQ Group in the 1980s, and started giving almost immediately. The first cause was Cudeca, the Costa del Sol hospice providing free specialised palliative care to people in the advanced stages of terminal cancer and to their families. When Cudeca built its hospice, he donated the reception. Everything since has followed the same instinct.</p>
+      <p>What grew out of that is the IDILIQ Foundation, which spent €1,600,000 building the F. Cruz Dias-ADIMI Care Centre in Mijas, a facility now treating more than 500 people. Alongside it sits the initiative he is proudest of, <a href="kind-holidays-story.html">donating rooms to families in crisis</a>, and a quieter annual list of Christmas Eve meals, charity-shop furniture and computer classrooms.</p>
+      <p>Two of those families later stood in front of 300 members of his staff and described what a single week had done for them; the recordings sit on <a href="https://vimeo.com/roypeires" target="_blank" rel="noopener">his Vimeo channel</a>. A longer account of <a href="about.html">four decades of quiet giving</a>, and of the industry Peires is still trying to persuade, runs through the pages that follow.</p>
+      <a class="ha-link" href="about.html">Learn more →</a>
+    </div>
+    <div><img class="ha-photo" src="images/hero-secondary.jpg" alt="Roy Peires"/></div>
+  </div>
+</div>
+
+<!-- ══ SOCIAL + PRESS ACCORDION ═══════════════════════════════════ -->
+<div class="acc-section" style="background:var(--off)">
+  <div class="acc-wrap">
+    <button class="acc-btn" onclick="tog(this,'s-home')">Follow Roy Peires on Social Media <span class="chevron">&#8964;</span></button>
+    <div class="acc-body" id="s-home"><div id="sml-soc-home" class="social-media-list"></div></div>
+    <button class="acc-btn" onclick="tog(this,'n-home')">Roy Peires in the Press <span class="chevron">&#8964;</span></button>
+    <div class="acc-body" id="n-home"><div id="sml-news-home" class="social-media-list"></div></div>
+  </div>
+</div>
+
+<!-- ══ LATEST ARTICLES ════════════════════════════════════════════ -->
+<div class="h-press">
+  <div class="pi">
+    <p class="eyebrow">Writing</p>
+    <h2 class="sec-title">On giving, hospitality, and the case for both</h2>
+    <div class="cards">
+      <a class="card card-article" href="kind-holidays-story.html">
+        <div class="ct-img"><img src="images/article-1.jpg" alt="The Kind Holidays Story: Why a Hotel Group Gives Its Rooms Away"/></div>
+        <div class="cb">
+          <div class="cb-pub">Kind Holidays</div>
+          <div class="cb-hl">The Kind Holidays Story: Why a Hotel Group Gives Its Rooms Away</div>
+          <div class="cb-yr">12 February 2026</div>
+        </div>
+      </a>
+      <a class="card card-article" href="idiliq-foundation-costa-del-sol.html">
+        <div class="ct-img"><img src="images/article-2.jpg" alt="Inside the IDILIQ Foundation: Four Decades of Giving on the Costa del Sol"/></div>
+        <div class="cb">
+          <div class="cb-pub">The IDILIQ Foundation</div>
+          <div class="cb-hl">Inside the IDILIQ Foundation: Four Decades of Giving on the Costa del Sol</div>
+          <div class="cb-yr">9 April 2026</div>
+        </div>
+      </a>
+      <a class="card card-article" href="hoteliers-guide-kind-holidays.html">
+        <div class="ct-img"><img src="images/article-3.jpg" alt="A Hotelier’s Guide to Starting a Kind Holidays Programme"/></div>
+        <div class="cb">
+          <div class="cb-pub">For Hoteliers</div>
+          <div class="cb-hl">A Hotelier’s Guide to Starting a Kind Holidays Programme</div>
+          <div class="cb-yr">18 June 2026</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CONTACT TEASER ═════════════════════════════════════════════ -->
+<div class="h-contact">
+  <div class="hc-inner">
+    <div>
+      <p class="eyebrow">Get in Touch</p>
+      <h2 class="sec-title">Contact</h2>
+      <form class="cf" onsubmit="return false">
+        <div><label>Your Name</label><input type="text" placeholder="Your name"/></div>
+        <div><label>Email</label><input type="email" placeholder="email@example.com"/></div>
+        <div><label>Message</label><textarea placeholder="Your message..."></textarea></div>
+        <button class="btn-sm" type="submit">Send Message</button>
+      </form>
+    </div>
+    <div class="hcp">
+      <h3 class="hc-title">Let's connect.</h3>
+      <p>Whether you run a hotel and want to know how a Kind Holidays programme actually works, or you represent a charity looking for accommodation, messages sent from here reach Roy Peires.</p>
+     
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 Roy Peires. All rights reserved. &nbsp;|&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+</footer>
+
+<script>
+function tog(btn,id){
+  const c=document.getElementById(id),open=c.classList.contains('open');
+  document.querySelectorAll('.acc-body').forEach(e=>e.classList.remove('open'));
+  document.querySelectorAll('.acc-btn').forEach(e=>e.classList.remove('open'));
+  if(!open){c.classList.add('open');btn.classList.add('open');}
+}
+</script>
+</body>
+</html>
